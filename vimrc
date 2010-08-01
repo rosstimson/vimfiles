@@ -258,19 +258,19 @@ if has("gui_running")
     "tell the term has 256 colors
     set t_Co=256
 
-    colorscheme railscasts
+    colorscheme Inkpot
     set guitablabel=%M%t
     set lines=40
     set columns=115
 
     if has("gui_gnome")
         set term=gnome-256color
-        colorscheme ir_dark
-        set guifont=Inconsolata\ Medium\ 12
+        colorscheme Inkpot
+        set guifont=Inconsolata\ Medium\ 14
     endif
 
     if has("gui_mac") || has("gui_macvim")
-        set guifont=Menlo:h14
+        set guifont=Inconsolata:h14
         " key binding for Command-T to behave properly
         " uncomment to replace the Mac Command-T key to Command-T plugin
         "macmenu &File.New\ Tab key=<nop>
@@ -278,7 +278,7 @@ if has("gui_running")
         " make Mac's Option key behave as the Meta key
         set invmmta
         try
-          set transparency=5
+          set transparency=0
         catch
         endtry
     endif
