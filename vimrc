@@ -18,7 +18,8 @@ set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
 
 set incsearch   "find the next match as we type the search
-set hlsearch    "hilight searches by default
+set hlsearch    "highlight searches by default
+set smartcase   "Enable smartcase search
 
 set number      "add line numbers
 set showbreak=...
