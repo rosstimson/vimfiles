@@ -386,5 +386,10 @@ function! s:HighlightLongLines(width)
     endif
 endfunction
 
+"shortcuts for moving between tabs
+"alt-j to move to the tab to the left
+noremap <A-j> gT
+"alt-k to move to the tab to the right
+noremap <A-k> gt
 
 let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'} 
