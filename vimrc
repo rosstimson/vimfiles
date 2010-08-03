@@ -25,6 +25,12 @@ set number      "add line numbers
 set showbreak=...
 set wrap linebreak nolist
 
+"use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
+"shortcut to toggle invisibles
+nmap <leader>l :set list!<CR>
+
 "mapping for command key to map navigation thru display lines instead
 "of just numbered lines
 vmap <D-j> gj
@@ -220,7 +226,8 @@ set autoindent
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
-nnoremap <space> za     "use spacebar to toggle folding
+"use space to toggle folding
+nnoremap <space> za 
 
 set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
@@ -273,6 +280,8 @@ if has("gui_running")
 
     if has("gui_mac") || has("gui_macvim")
         set guifont=Inconsolata:h14
+        " PeepOpen mapping to avoid conflict with NERDtree
+        nmap <silent> <leader>q <Plug>PeepOpen
         " key binding for Command-T to behave properly
         " uncomment to replace the Mac Command-T key to Command-T plugin
         "macmenu &File.New\ Tab key=<nop>
