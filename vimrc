@@ -267,14 +267,14 @@ if has("gui_running")
     "tell the term has 256 colors
     set t_Co=256
 
-    colorscheme Inkpot
+    colorscheme inkpot
     set guitablabel=%M%t
     set lines=40
     set columns=115
 
     if has("gui_gnome")
         set term=gnome-256color
-        colorscheme Inkpot
+        colorscheme inkpot
         set guifont=Inconsolata\ Medium\ 14
     endif
 
