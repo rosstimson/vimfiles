@@ -26,7 +26,7 @@ set showbreak=...
 set wrap linebreak nolist
 
 "use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,trail:·,eol:¬
 
 "shortcut to toggle invisibles
 nmap <leader>l :set list!<CR>
