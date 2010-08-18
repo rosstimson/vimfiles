@@ -399,4 +399,8 @@ noremap <A-j> gT
 "alt-k to move to the tab to the right
 noremap <A-k> gt
 
+"key mapping for tab navigation
+nmap <Tab> gt
+nmap <S-Tab> gT
+
 let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'} 
