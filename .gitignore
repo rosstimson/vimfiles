@@ -5,3 +5,4 @@ tags
 .VimballRecord
 .netrwhist
 bundle/vim-peepopen
+bundle/Command-T/ruby/command-t/ext.bundle
