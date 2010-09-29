@@ -407,4 +407,14 @@ noremap <A-k> gt
 nmap <Tab> gt
 nmap <S-Tab> gT
 
+" Show syntax highlighting groups for word under cursor this helps when writing
+" color schemes.
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
 let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'} 
