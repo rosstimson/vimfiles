@@ -280,6 +280,10 @@ if has("gui_running")
 
     if has("gui_mac") || has("gui_macvim")
         set guifont=Inconsolata:h14
+
+        " Fullscreen takes up entire screen
+        set fuoptions=maxhorz,maxvert
+
         " key binding for Command-T to behave properly
         " uncomment to replace the Mac Command-T key to Command-T plugin
         "macmenu &File.New\ Tab key=<nop>
