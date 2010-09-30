@@ -85,3 +85,6 @@
 [submodule "bundle/conque"]
 	path = bundle/conque
 	url = git://github.com/chrismetcalf/vim-conque.git
+[submodule "bundle/lusty_juggler"]
+	path = bundle/lusty_juggler
+	url = git://github.com/vim-scripts/LustyJuggler.git
