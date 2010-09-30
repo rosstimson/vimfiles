@@ -53,10 +53,6 @@ else
     let g:CSApprox_loaded = 1
 endif
 
-" PeepOpen uses <Leader>p as well so you will need to redefine it so something
-" else in your ~/.vimrc file, such as:
-nmap <silent> <Leader>o <Plug>PeepOpen
-
 " Local config
 if filereadable(".gvimrc.local")
   source .gvimrc.local
