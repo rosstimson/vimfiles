@@ -106,9 +106,6 @@ set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 set laststatus=2
 
-"turn off needless toolbar on gvim/mvim
-set guioptions-=T
-
 "recalculate the trailing whitespace warning when idle, and after saving
 autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
 
@@ -123,17 +120,6 @@ function! StatuslineTrailingSpaceWarning()
         endif
     endif
     return b:statusline_trailing_space_warning
-endfunction
-
-
-"return the syntax highlight group under the cursor ''
-function! StatuslineCurrentHighlight()
-    let name = synIDattr(synID(line('.'),col('.'),1),'name')
-    if name == ''
-        return ''
-    else
-        return '[' . name . ']'
-    endif
 endfunction
 
 "recalculate the tab warning flag when idle and after writing
@@ -233,11 +219,6 @@ set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 
-"display tabs and trailing spaces
-"set list
-"set listchars=tab:\ \ ,extends:>,precedes:<
-" disabling list because it interferes with soft wrap
-
 set formatoptions-=o "dont continue comments when pushing o/O
 
 "vertical/horizontal scroll off settings
@@ -252,6 +233,9 @@ filetype indent on
 "turn on syntax highlighting
 syntax on
 
+" initial colourscheme before gui configs
+colorscheme lucius
+
 "some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
@@ -262,52 +246,6 @@ set hidden
 "Command-T configuration
 let g:CommandTMaxHeight=10
 let g:CommandTMatchWindowAtTop=1
-
-if has("gui_running")
-    "tell the term has 256 colors
-    set t_Co=256
-
-    colorscheme inkpot
-    set guitablabel=%M%t
-    set lines=40
-    set columns=115
-
-    if has("gui_gnome")
-        set term=gnome-256color
-        colorscheme inkpot
-        set guifont=Inconsolata\ Medium\ 14
-    endif
-
-    if has("gui_mac") || has("gui_macvim")
-        set guifont=Inconsolata:h14
-
-        " Fullscreen takes up entire screen
-        set fuoptions=maxhorz,maxvert
-
-        " key binding for Command-T to behave properly
-        " uncomment to replace the Mac Command-T key to Command-T plugin
-        "macmenu &File.New\ Tab key=<nop>
-        "map <D-t> :CommandT<CR>
-        " make Mac's Option key behave as the Meta key
-        set invmmta
-        try
-          set transparency=0
-        catch
-        endtry
-    endif
-
-    if has("gui_win32") || has("gui_win32s")
-        set guifont=Consolas:h12
-        set enc=utf-8
-    endif
-else
-    "dont load csapprox if there is no gui support - silences an annoying warning
-    let g:CSApprox_loaded = 1
-endif
-
-" PeepOpen uses <Leader>p as well so you will need to redefine it so something
-" else in your ~/.vimrc file, such as:
-nmap <silent> <Leader>o <Plug>PeepOpen
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nnoremap <silent> <C-f> :call FindInNERDTree()<CR> 
