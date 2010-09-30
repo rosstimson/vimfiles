@@ -322,6 +322,15 @@ nnoremap <leader>b :BufExplorer<cr>
 "map to CommandT TextMate style finder
 nnoremap <leader>t :CommandT<CR>
 
+"map <Leader>c to ConqueTerm
+map <Leader>c :call StartTerm()<CR>
+
+" ConqueTerm wrapper
+function StartTerm()
+  execute 'ConqueTerm ' . $SHELL . ' --login'
+  setlocal listchars=tab:\ \ 
+endfunction
+
 "map Q to something useful
 noremap Q gq
 
