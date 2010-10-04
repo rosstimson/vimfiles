@@ -360,8 +360,8 @@ noremap <A-k> gt
 nmap <Tab> gt
 nmap <S-Tab> gT
 
-" key mapping Control-e to toggle comments
-map <C-/> <plug>NERDCommenterToggle<CR>
+" key mapping Command-e to toggle comments
+map <D-/> <plug>NERDCommenterToggle<CR>
 
 " Show syntax highlighting groups for word under cursor this helps when writing
 " color schemes.
