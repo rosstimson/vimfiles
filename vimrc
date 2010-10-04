@@ -3,6 +3,7 @@ filetype off
 
 "load pathogen managed plugins
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
@@ -234,6 +235,7 @@ filetype indent on
 syntax on
 
 " initial colourscheme before gui configs
+set background=dark
 colorscheme lucius
 
 "some stuff to get the mouse going in term
@@ -357,6 +359,9 @@ noremap <A-k> gt
 "key mapping for tab navigation
 nmap <Tab> gt
 nmap <S-Tab> gT
+
+" key mapping Command-e to toggle comments
+map <D-/> <plug>NERDCommenterToggle<CR>
 
 " Show syntax highlighting groups for word under cursor this helps when writing
 " color schemes.
