@@ -88,3 +88,6 @@
 [submodule "bundle/Command-T"]
 	path = bundle/Command-T
 	url = git://github.com/wincent/Command-T.git
+[submodule "bundle/lusty_juggler"]
+	path = bundle/lusty_juggler
+	url = git://github.com/vim-scripts/LustyJuggler.git
