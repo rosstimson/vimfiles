@@ -1,5 +1,5 @@
 " Font
-set gfn=Inconsolata\ Medium\ 14
+set gfn=Inconsolata\ Medium\ 12
  
 " No audible bell
 set vb
@@ -21,9 +21,10 @@ if has("gui_running")
     set columns=115
 
     if has("gui_gnome")
-        set term=gnome-256color
+        "Setting 256color seems to screw up vim on Ubuntu 10.10
+        "set term=gnome-256color
         colorscheme molokai
-        set guifont=Inconsolata\ Medium\ 14
+        set guifont=Inconsolata\ Medium\ 12
     endif
 
     if has("gui_mac") || has("gui_macvim")
