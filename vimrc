@@ -261,7 +261,10 @@ nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
 "map to bufexplorer
-nnoremap <leader>b :BufExplorer<cr>
+nnoremap <leader>b :BufExplorer<CR>
+
+"map to LustyJuggler
+nnoremap <leader>j :LustyJuggler<CR>
 
 "map to CommandT TextMate style finder
 nnoremap <leader>t :CommandT<CR>
