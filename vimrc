@@ -376,4 +376,7 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'} 
+let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
+
+" Auto-compile CoffeeScript on write/save
+let coffee_compile_on_save = 1
