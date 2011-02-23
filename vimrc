@@ -26,6 +26,10 @@ set number      "add line numbers
 set showbreak=...
 set wrap linebreak nolist
 
+" Setting spellcheck whenk entering normal mode & off in insert mode
+autocmd InsertEnter * setlocal nospell
+autocmd InsertLeave * setlocal spell
+
 "use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,trail:·,eol:¬
 
