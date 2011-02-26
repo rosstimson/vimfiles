@@ -26,6 +26,10 @@ set number      "add line numbers
 set showbreak=...
 set wrap linebreak nolist
 
+" Some settings for VimDiff
+set diffopt=filler
+set diffopt+=iwhite " Ignore whitespace changes in diffs
+
 " Setting spellcheck whenk entering normal mode & off in insert mode
 autocmd InsertEnter * setlocal nospell
 autocmd InsertLeave * setlocal spell
