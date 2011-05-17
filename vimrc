@@ -34,52 +34,10 @@ set diffopt+=iwhite " Ignore whitespace changes in diffs
 autocmd InsertEnter * setlocal nospell
 autocmd InsertLeave * setlocal spell
 
-" Setting defaults for different platforms
-if has("gui_running")
-    "tell the term has 256 colors
-    set t_Co=256
-    set background=dark
-    colorscheme molokai
-    set guitablabel=%M%t
-    set lines=40
-    set columns=115
-
-    if has("gui_gnome")
-        "Setting 256color seems to screw up vim on Ubuntu 10.10
-        "set term=gnome-256color
-        colorscheme molokai
-        set guifont=Inconsolata\ Medium\ 12
-    endif
-
-    if has("gui_mac") || has("gui_macvim")
-        set guifont=Inconsolata:h14
-
-        " Fullscreen takes up entire screen
-        set fuoptions=maxhorz,maxvert
-
-        " key binding for Command-T to behave properly
-        " uncomment to replace the Mac Command-T key to Command-T plugin
-        "macmenu &File.New\ Tab key=<nop>
-        "map <D-t> :CommandT<CR>
-        " make Mac's Option key behave as the Meta key
-        set invmmta
-        try
-          set transparency=0
-        catch
-        endtry
-    endif
-
-    if has("gui_win32") || has("gui_win32s")
-        set guifont=Consolas:h12
-        set enc=utf-8
-    endif
-else
-    "dont load csapprox if there is no gui support - silences an annoying warning
-    let g:CSApprox_loaded = 1
-endif
-
 "use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,trail:·,eol:¬
+" set listchars=tab:▸\ ,trail:·,eol:¬
+"use these to be compatible with remote servers that may be unable to show TextMate style.
+set listchars=tab:>-,trail:~,eol:$
 
 "shortcut to toggle invisibles
 nmap <leader>l :set list!<CR>
@@ -288,7 +246,7 @@ syntax on
 
 " initial colourscheme before gui configs
 set background=dark
-colorscheme lucius
+colorscheme inkpot
 
 "some stuff to get the mouse going in term
 set mouse=a
@@ -300,6 +258,46 @@ set hidden
 "Command-T configuration
 let g:CommandTMaxHeight=10
 let g:CommandTMatchWindowAtTop=1
+
+" Setting defaults for different platforms
+if has("gui_running")
+    "tell the term has 256 colors
+    set t_Co=256
+    set background=dark
+    colorscheme molokai
+    set guitablabel=%M%t
+    set lines=40
+    set columns=115
+
+    if has("gui_gnome")
+        set term=gnome-256color
+        colorscheme molokai
+        set guifont=Inconsolata\ Medium\ 12
+    endif
+
+    if has("gui_mac") || has("gui_macvim")
+        set guifont=Inconsolata:h14
+
+        " key binding for Command-T to behave properly
+        " uncomment to replace the Mac Command-T key to Command-T plugin
+        "macmenu &File.New\ Tab key=<nop>
+        "map <D-t> :CommandT<CR>
+        " make Mac's Option key behave as the Meta key
+        set invmmta
+        try
+          set transparency=0
+        catch
+        endtry
+    endif
+
+    if has("gui_win32") || has("gui_win32s")
+        set guifont=Consolas:h12
+        set enc=utf-8
+    endif
+else
+    "dont load csapprox if there is no gui support - silences an annoying warning
+    let g:CSApprox_loaded = 1
+endif
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nnoremap <silent> <C-f> :call FindInNERDTree()<CR> 
@@ -433,6 +431,6 @@ let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
 " Auto-compile CoffeeScript on write/save
 " autocmd BufWritePost *.coffee silent CoffeeMake!
 " Bind CoffeeMake to a key
-" nmap KEY :CoffeeMake<CR>
+nmap <leader>m :CoffeeMake<CR>
 " Bind CoffeeCompile to a visual mode key
-" vmap KEY :CoffeeCompile<CR>
+vmap <leader>n :CoffeeCompile<CR>
