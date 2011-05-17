@@ -431,4 +431,8 @@ endfunc
 let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
 
 " Auto-compile CoffeeScript on write/save
-let coffee_compile_on_save = 1
+" autocmd BufWritePost *.coffee silent CoffeeMake!
+" Bind CoffeeMake to a key
+" nmap KEY :CoffeeMake<CR>
+" Bind CoffeeCompile to a visual mode key
+" vmap KEY :CoffeeCompile<CR>
