@@ -413,7 +413,7 @@ noremap <A-k> gt
 nmap <Tab> gt
 nmap <S-Tab> gT
 
-" key mapping Command-e to toggle comments
+" key mapping Command-/ to toggle comments
 map <D-/> <plug>NERDCommenterToggle<CR>
 
 " Show syntax highlighting groups for word under cursor this helps when writing
@@ -434,3 +434,6 @@ let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
 nmap <leader>m :CoffeeMake<CR>
 " Bind CoffeeCompile to a visual mode key
 vmap <leader>n :CoffeeCompile<CR>
+
+" key mapping for vim-preview as default <leader>P conflicts with my NERDtree
+nmap <leader>g :Preview<CR>
