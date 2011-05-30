@@ -28,3 +28,8 @@ setlocal cindent
 " Known issue: Trying to do a multi-line struct literal in a short variable
 "              declaration will not indent properly.
 setlocal cinoptions+=+0,L0,:0,l1,J1,(0,Ws,m1
+
+"Set larger 4 char indents for Go code as recommended.
+set shiftwidth=4
+set softtabstop=4
+
