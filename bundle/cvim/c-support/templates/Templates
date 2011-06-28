@@ -3,10 +3,10 @@ $ =============================================================
 $ ========== USER MACROS ======================================
 $ =============================================================
 $
-|AUTHOR|    = YOUR NAME 
-|AUTHORREF| = 
-|EMAIL|     = 
-|COMPANY|   = 
+|AUTHOR|    = Ross Timson
+|AUTHORREF| = ross_t
+|EMAIL|     = ross@rosstimson.com
+|COMPANY|   = rosstimson.com
 |COPYRIGHT| = Copyright (c) |YEAR|, |AUTHOR|
 |STYLE|     = default
 $

@@ -66,12 +66,12 @@ if	s:MSWIN
 	if match( s:sourced_script_file, escape( s:vimfiles, ' \' ) ) == 0
 		" system wide installation
 		let s:installation					= 'system'
-		let s:plugin_dir						= $VIM.'/vimfiles/'
+		let s:plugin_dir						= $VIM.'/vimfiles/bundle/cvim/'
 		let s:C_GlobalTemplateDir		= s:plugin_dir.'c-support/templates'
 		let s:C_GlobalTemplateFile  = s:C_GlobalTemplateDir.'/Templates'
 	else
 		" user installation assumed
-		let s:plugin_dir  					= $HOME.'/vimfiles/'
+		let s:plugin_dir  					= $HOME.'/vimfiles/bundle/cvim/'
 	endif
 	"
 	let s:C_LocalTemplateFile     = $HOME.'/vimfiles/c-support/templates/Templates'
@@ -87,18 +87,18 @@ else
 	"
 	if match( expand("<sfile>"), expand("$HOME") ) == 0
 		" user installation assumed
-		let s:plugin_dir  	= $HOME.'/.vim/'
+		let s:plugin_dir  	= $HOME.'/.vim/bundle/cvim'
 	else
 		" system wide installation
 		let s:installation					= 'system'
 		let s:plugin_dir						= $VIM.'/vimfiles/'
-		let s:C_GlobalTemplateDir		= s:plugin_dir.'c-support/templates'
+		let s:C_GlobalTemplateDir		= s:plugin_dir.'bundle/cvim/c-support/templates'
 		let s:C_GlobalTemplateFile  = s:C_GlobalTemplateDir.'/Templates'
 	endif
 	"
-	let s:C_LocalTemplateFile     = $HOME.'/.vim/c-support/templates/Templates'
+	let s:C_LocalTemplateFile     = $HOME.'/.vim/bundle/cvim/c-support/templates/Templates'
 	let s:C_LocalTemplateDir      = fnamemodify( s:C_LocalTemplateFile, ":p:h" ).'/'
-	let s:C_CodeSnippets  				= $HOME.'/.vim/c-support/codesnippets/'
+	let s:C_CodeSnippets  				= $HOME.'/.vim/bundle/cvim/c-support/codesnippets/'
 	let s:C_IndentErrorLog				= $HOME.'/.indent.errorlog'
 	"
   let s:escfilename 	= ' \%#[]'
