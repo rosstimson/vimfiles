@@ -245,8 +245,10 @@ filetype indent on
 syntax on
 
 " initial colourscheme before gui configs
+se t_Co=16
+let g:solarized_termcolors=16
 set background=dark
-colorscheme inkpot
+colorscheme solarized
 
 "some stuff to get the mouse going in term
 set mouse=a
@@ -264,14 +266,14 @@ if has("gui_running")
     "tell the term has 256 colors
     set t_Co=256
     set background=dark
-    colorscheme molokai
+    colorscheme solarized
     set guitablabel=%M%t
     set lines=40
     set columns=115
 
     if has("gui_gnome")
         set term=gnome-256color
-        colorscheme molokai
+        colorscheme solarized
         set guifont=Inconsolata\ Medium\ 12
     endif
 
