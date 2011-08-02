@@ -437,3 +437,6 @@ vmap <leader>n :CoffeeCompile<CR>
 
 " key mapping for vim-preview as default <leader>P conflicts with my NERDtree
 nmap <leader>g :Preview<CR>
+
+" Prefer ACII Armor when using GNUPG plugin (Defaults to binary data)
+let g:GPGPreferArmor = 1
