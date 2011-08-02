@@ -109,3 +109,6 @@
 [submodule "bundle/nginx"]
 	path = bundle/nginx
 	url = git://github.com/vim-scripts/nginx.vim.git
+[submodule "bundle/gnupg"]
+	path = bundle/gnupg
+	url = git://github.com/vim-scripts/gnupg.vim.git
