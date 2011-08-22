@@ -115,3 +115,9 @@
 [submodule "bundle/todo-txt"]
 	path = bundle/todo-txt
 	url = git://github.com/mivok/vimtodo.git
+[submodule "bundle/rake"]
+	path = bundle/rake
+	url = git://github.com/tpope/vim-rake.git
+[submodule "bundle/bundler"]
+	path = bundle/bundler
+	url = git://github.com/tpope/vim-bundler.git
