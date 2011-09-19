@@ -228,7 +228,7 @@ nnoremap <space> za
 
 set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildignore+=*.o,*.obj,*~,*/.git/*,*/.hg/*,*/.bzr/*,*/.svn/* "stuff to ignore when tab completing
 
 set formatoptions-=o "dont continue comments when pushing o/O
 
@@ -254,10 +254,6 @@ set ttymouse=xterm2
 
 "hide buffers when not displayed
 set hidden
-
-"Command-T configuration
-let g:CommandTMaxHeight=10
-let g:CommandTMatchWindowAtTop=1
 
 " Setting defaults for different platforms
 if has("gui_running")
@@ -317,7 +313,16 @@ nnoremap <leader>b :BufExplorer<CR>
 nnoremap <leader>j :LustyJuggler<CR>
 
 "map to CommandT TextMate style finder
-nnoremap <leader>t :CommandT<CR>
+"let g:CommandTMaxHeight=10
+"let g:CommandTMatchWindowAtTop=1
+"nnoremap <leader>t :CommandT<CR>
+"
+" mapping CtrlP and settings some defaults
+let g:ctrlp_map = '<leader>t'
+" working path is nearest ancestor that contains SCM file such as .git
+let g:ctrlp_working_path_mode = 1
+" enabling most recent used file monitoring
+let g:ctrlp_mru_files = 1
 
 "map <Leader>c to ConqueTerm
 map <Leader>c :call StartTerm()<CR>
