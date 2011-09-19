@@ -310,7 +310,7 @@ inoremap <C-L> <C-O>:nohls<CR>
 nnoremap <leader>b :BufExplorer<CR>
 
 "map to LustyJuggler
-nnoremap <leader>j :LustyJuggler<CR>
+"nnoremap <leader>j :LustyJuggler<CR>
 
 "map to CommandT TextMate style finder
 "let g:CommandTMaxHeight=10
@@ -323,6 +323,10 @@ let g:ctrlp_map = '<leader>t'
 let g:ctrlp_working_path_mode = 1
 " enabling most recent used file monitoring
 let g:ctrlp_mru_files = 1
+" setting maximum height of match window
+let g:ctrl_max_height = 10
+" set number of recently opened files to remember
+let g:ctrl_mruf_max = 50
 
 "map <Leader>c to ConqueTerm
 map <Leader>c :call StartTerm()<CR>
