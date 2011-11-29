@@ -298,10 +298,6 @@ endif
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nnoremap <silent> <C-f> :call FindInNERDTree()<CR> 
 
-" PeepOpen uses <Leader>p as well so you will need to redefine it so something
-" else in your ~/.vimrc file, such as:
-nmap <silent> <Leader>o <Plug>PeepOpen
-
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
@@ -309,14 +305,6 @@ inoremap <C-L> <C-O>:nohls<CR>
 "map to bufexplorer
 nnoremap <leader>b :BufExplorer<CR>
 
-"map to LustyJuggler
-"nnoremap <leader>j :LustyJuggler<CR>
-
-"map to CommandT TextMate style finder
-"let g:CommandTMaxHeight=10
-"let g:CommandTMatchWindowAtTop=1
-"nnoremap <leader>t :CommandT<CR>
-"
 " mapping CtrlP and settings some defaults
 let g:ctrlp_map = '<leader>t'
 " working path is nearest ancestor that contains SCM file such as .git
@@ -327,15 +315,6 @@ let g:ctrlp_mru_files = 1
 let g:ctrl_max_height = 10
 " set number of recently opened files to remember
 let g:ctrl_mruf_max = 50
-
-"map <Leader>c to ConqueTerm
-map <Leader>c :call StartTerm()<CR>
-
-" ConqueTerm wrapper
-function StartTerm()
-  execute 'ConqueTerm ' . $SHELL . ' --login'
-  setlocal listchars=tab:\ \ 
-endfunction
 
 "map Q to something useful
 noremap Q gq
