@@ -115,3 +115,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
+[submodule "bundle/html5"]
+	path = bundle/html5
+	url = git://github.com/rosstimson/html5.vim.git
