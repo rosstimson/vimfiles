@@ -422,9 +422,14 @@ let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
 nmap <leader>m :CoffeeMake<CR>
 " Bind CoffeeCompile to a visual mode key
 vmap <leader>n :CoffeeCompile<CR>
+" Split CoffeeCompile buffer vertically
+let coffee_compile_vert = 1
 
 " key mapping for vim-preview as default <leader>P conflicts with my NERDtree
 nmap <leader>g :Preview<CR>
 
 " Prefer ACII Armor when using GNUPG plugin (Defaults to binary data)
 let g:GPGPreferArmor = 1
+
+" Mapping F8 to Tagbar
+nmap <F8> :TagbarToggle<CR>

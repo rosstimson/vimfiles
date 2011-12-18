@@ -121,3 +121,6 @@
 [submodule "bundle/modx"]
 	path = bundle/modx
 	url = git://github.com/rosstimson/modx.vim.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
