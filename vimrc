@@ -308,7 +308,7 @@ nnoremap <leader>b :BufExplorer<CR>
 " mapping CtrlP and settings some defaults
 let g:ctrlp_map = '<leader>t'
 " working path is nearest ancestor that contains SCM file such as .git
-let g:ctrlp_working_path_mode = 1
+let g:ctrlp_working_path_mode = 2
 " enabling most recent used file monitoring
 let g:ctrlp_mru_files = 1
 " setting maximum height of match window
