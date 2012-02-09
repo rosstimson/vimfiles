@@ -132,4 +132,4 @@
 	url = git://github.com/tpope/vim-repeat.git
 [submodule "bundle/css-color"]
 	path = bundle/css-color
-	url = git://github.com/skammer/vim-css-color.git
+	url = git://github.com/ap/vim-css-color.git
